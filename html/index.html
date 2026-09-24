@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>VATC | Online Gallery</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand"
+        ><img src="../assets/logo-vatc.jpg" /><span
+          ><b>VATC</b><small>ONLINE GALLERY</small></span
+        ></a
+      >
+      <button id="refresh">↻ Refresh</button
+      ><button id="settings">⚙ API</button>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <p>VERSYS ADVENTURE TOURING CLUB · MALAYSIA</p>
+          <h1>Ride.<br /><i>Remember.</i></h1>
+          <p class="intro">Live VATC photos from Google Drive.</p>
+        </div>
+        <img class="hero-logo" src="../assets/logo-vatc.jpg" />
+      </section>
+      <section class="gallery-section">
+        <div class="head">
+          <div>
+            <p>THE GALLERY</p>
+            <h2>Latest rides & memories</h2>
+          </div>
+          <div><b id="count">—</b><small> photos</small></div>
+        </div>
+        <div id="status">Loading gallery…</div>
+        <div id="gallery"></div>
+        <button id="more" class="hidden">Load more</button>
+      </section>
+    </main>
+    <footer>
+      © VATC Malaysia <span>Google Drive · Apps Script · Firebase</span>
+    </footer>
+    <div id="modal" class="overlay hidden">
+      <div class="card">
+        <button id="close">×</button>
+        <p>SETUP</p>
+        <h2>Gallery API</h2>
+        <label>Apps Script Web App URL</label
+        ><input
+          id="api"
+          placeholder="https://script.google.com/macros/s/AKfycbwbFcZc66mqsYSbUNRozQ9KN65XPbPllBTpFl5Pz4KAjst0m--M6avdZeBUMAFxHVibGg/exec"
+        /><button id="save">Save & load gallery</button>
+      </div>
+    </div>
+    <div id="viewer" class="overlay hidden">
+      <button id="x">×</button><button id="prev">‹</button>
+      <div>
+        <img id="viewImg" />
+        <p id="viewName"></p>
+        <a id="download" target="_blank">Open / Download</a>
+      </div>
+      <button id="next">›</button>
+    </div>
+    <script src="../js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "vatc-gallery",
+  "private": true,
+  "scripts": {
+    "deploy": "firebase deploy --only hosting",
+    "serve": "firebase serve"
+  },
+  "devDependencies": {
+    "firebase-tools": "latest"
+  }
+}
